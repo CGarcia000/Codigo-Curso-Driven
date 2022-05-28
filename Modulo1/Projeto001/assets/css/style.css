@@ -12,6 +12,18 @@ a {
     color: #303134;
 }
 
+a:hover h2 {
+    color: #f03018;
+}
+
+.esporte a:hover h2 {
+    color: #1fb25a;
+}
+
+.gshow a:hover h2 {
+    color: #ff8533;
+}
+
 h1, h2, h3, p {
     margin-bottom: 10px;
 }

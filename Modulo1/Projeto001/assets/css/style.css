@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #303134;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 10px;
+}
+
+/* *** Header *** */
+
+#header {
+    width: 100%;
+}
+
+#header div {
+    border-bottom: 1px solid #f5f6f7;
+}
+
+#logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+#menu-header ul {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 80%; /*problema? trocar dps para 100% */
+    margin: 0 auto;
+}
+
+#menu-header li {
+    display: flex;
+    align-items: center;
+    
+    height: 40px;
+}
+
+.link-g1 a {
+    color: #C3170C;
+}
+
+.link-o-globo a {
+    color: #1E4B9B;
+}
+
+.link-valor a {
+    color: #006766;
+}
+
+.link-ge a {
+    color: #07AA47;
+}
+
+.link-cartola a {
+    color: #E3662B;
+}
+
+.link-globoplay a {
+    color: #FB0735;
+}
+
+.link-dropz a {
+    color: #FF75BB;
+}
+
+.link-gshow a {
+    color: #EC7D00;
+}
+
+.link-quem a {
+    color: #323333;
+}
+
+.link-receitas a {
+    color: #A81D83;
+}
+
+
+/* *** Container *** */
+
+#container-noticias {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#noticias-geral {
+    display: flex;
+    flex-direction: column;
+    width: 680px;
+    padding: 10px;
+}
+
+#noticias-coluna {
+    display: flex;
+    flex-wrap: wrap;
+    width: 570px;
+}
+
+#materia-principal h1 {
+    font-size: 52px;
+    font-weight: bold;
+    color: #C4160C;
+}
+
+.materia-secundaria {
+    font-size: 18px;
+    color: #303134;
+}
+
+#container-geral {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noticia {
+    font-size: 14px;
+    font-weight: 400;
+    width: 200px;
+    padding: 10px;
+    border-top: 1px solid #f5f6f7;
+}
+
+.noticia img {
+    width: 193px;
+    height: 110px;
+    border-radius: 12px;
+}
+
+.noticia h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.noticia h3 {
+    color: #C4170C;
+    font-weight: normal;
+}
+
+.img-destaque {
+    width: 260px;
+    border-top: none;
+    border-left: 1px solid #f5f6f7;
+}
+.img-destaque img {
+    width: 240px;
+    height: 128px;
+}
+
+.esporte h3 {
+    color: #07AA47;
+}
+
+.gshow h3 {
+    color: #E3662B;
+}

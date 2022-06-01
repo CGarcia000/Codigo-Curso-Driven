@@ -1,0 +1,15 @@
+
+
+
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media (max-width: 935px) {
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media (max-width: 614px) {
+
+    
+}

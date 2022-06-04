@@ -1,15 +1,400 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+input {
+    height: 20px;
+}
+
+i {
+    /* height: 22px;
+    width: 22px; */
+    color: black;
+}
+
+.bold {
+    font-weight: 500;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #139EF2;
+}
+
+input {
+    text-align: center;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    padding: 7px 0;
+    height: 28px;
+}
+
+span {
+    color: black;
+}
 
 
+/* Header */
 
+#header {
+    font-size: 19px;
+    border-bottom: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 3;
+}
+
+#header img {
+    padding-top: 5px;
+    max-width:103px;
+    max-height:29px;
+}
+
+#header input {
+    width: 215px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo div {
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #DBDBDB;
+}
+
+
+#buttons {
+    width: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* Container */
+
+#container {
+    margin-top: 60px;
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    /* height: 1000px; */
+}
+
+#box-right {
+    width: 60%;
+    display: flex;
+    justify-content: right;
+}
+
+#box-left {
+    width: 40%;
+}
+
+#coluna-principal {
+    margin-top: 40px;
+    width: 614px;
+}
+
+#stories-box {
+    /* width: 614px; */
+    height: 120px;
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 300;
+    position: relative;
+    /* margin: 0 20px; */
+}
+
+#posts-column {
+    margin-top: 24px;
+}
+
+#side-bar { 
+    width: 313px;
+    position: fixed;
+    top: 100px;
+    margin-left: 20px;
+    /* background-color: white; tirar dps */
+    color: #8E8E8E;
+}
+
+/* Storie */
+
+#stories-box i {
+    top: 46%;
+    right: 15px;
+    position: absolute;
+    color: rgb(255, 255, 255, 0.9);
+    z-index: 3;
+}
+
+.storie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.storie-user {
+    position: relative;
+    width: 66px;
+    height: 66px;
+}
+
+
+.storie-bg {
+    position: absolute;
+    z-index: 1;
+    width: 66px;
+    height: 66px;
+}
+
+.storie-icon {
+    position: absolute;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    margin: 5px;
+}
+
+/* Post */
+
+.post {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 50px;
+}
+
+.post-header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.post-header a {
+    margin-top: 3px;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+}
+
+.post-user img {
+    width: 36px;
+    height: 36px;
+    margin: 15px;
+}
+
+.post-img {
+    width: 613px;
+    height: 613px;
+}
+
+.post-footer {
+    /* height: 90px; ajustar dps */
+    font-weight: 300;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.post-footer img {
+    width: 26px;
+    height: 26px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.post-footer div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    margin-left: 7px;
+}
+
+.react-buttons {
+    width: 95px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-important {
+    display: flex;
+    align-items: center;
+}
+
+/* SideBar */
+
+.conta {
+    display:flex;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.conta img {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+#sugestoes-vc div:nth-child(1) {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+#sugestoes-vc div:nth-child(1) a {
+    color: black;
+}
+
+.sugestao {
+    margin: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.sugestao-info {
+    display: flex;
+    align-items: center;
+}
+
+.sugestao-info img {
+    margin-right: 10px;
+}
+
+#sidebar-footer {
+    font-size: 11px;
+    color: #C7C7C7;
+}
+
+#sidebar-footer a {
+    color: #C7C7C7;
+}
+
+#sidebar-footer p {
+    margin: 15px 0;
+}
+
+#footer-mobile {
+    display: none;
+}
+
+/* Media query */
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media (max-width: 935px) {
+    #header {
+        justify-content: space-between;
+    }
+
+    #logo {
+        margin-left: 10px;
+    }
+
+    #box-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #box-left {
+        display: none;
+    }
 
 }
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media (max-width: 614px) {
 
+    #header img {
+        display: none;
+    }
     
+    #header div {
+        border: none;
+    }
+
+    #buttons {
+        width: 36px;
+        margin-right: 10px;
+    }
+    
+    #buttons a:nth-child(even),
+    #buttons a:nth-child(3) {
+        display: none;
+    }
+
+    #box-right {
+        width: 100%;
+    }
+
+    #coluna-principal {
+        margin-top: 10px;
+    }
+
+    #stories-box {
+        width: 100%;
+        background-color: #fcfcfc;
+        border: none;
+    }
+
+    #stories-box i {
+        display: none;
+    }
+
+    #post-column {
+        width: 100%;
+    }
+
+    .post {
+        border-radius: 0;
+    }
+
+    #footer-mobile {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* --- */
+        height: 40px;
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 5px;
+    }
+
+    #footer-mobile a {
+        height: 22px;
+    }
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/5fd0b59957.js" crossorigin="anonymous"></script>
+    <title>DrivenEats</title>
+</head>
+<body>
+    <header>
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </header>
+
+    <div id="modal">
+        <div>
+            <h1>Confirme seu pedido</h1>
+            <p><span>dkjas</span> <span>R$14,90</span></p>
+            <p><span>das</span> <span>R$4,90</span></p>
+            <p><span>das</span> <span>R$7,90</span></p>
+            <p class="bold"><span>Total</span> <span>R$27,90</span></p>
+            <button>Tudo certo, pode pedir!</button>
+            <a href="#" onclick="removeModal()">Cancelar</a>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="main-dish">
+            <h1>Primeiro, seu prato</h1>
+            <div id="selector-main-dish">
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/hamb-siri.png" alt="">
+                        <h2>Frango Yin Yang</h2>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">4,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/hamb-siri.png" alt="">
+                        <h2>Frango Yin Yang</h2>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/hamb-siri.png" alt="">
+                        <h2>Frango Yin Yang</h2>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="drink">
+            <h1>Agora, sua bebida</h1>
+            <div id="selector-drink">
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/agua.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/agua.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/agua.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dessert">
+            <h1>Por fim, sua sobremesa</h1>
+            <div id="selector-dessert">
+                <div class="option">
+                    <div>
+                        <img src="assets/img/donut.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/donut.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/donut.png" alt="">
+                        <h2>Água</h2>
+                        <p>A mais pura água</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">14,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button id="get-order-btn">Selecione os 3 itens para fechar o pedido</button>
+    </footer>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

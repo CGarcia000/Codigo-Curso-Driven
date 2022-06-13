@@ -46,22 +46,37 @@ function getOrderReady (ready=false) {
 }
 
 function finishOrder() {
-    const total = calculatePrice();
-    console.log(total);
+    const [total, arrItens] = calculatePrice();
+    modal.classList.remove('remove');
+    itensModal = modal.getElementsByTagName('p');
+    for (let i=0; i < arrItens.length; i++) {
+        itensModal[i].childNodes[0].innerText = arrItens[i][0];
+        itensModal[i].childNodes[2].innerText = arrItens[i][1];
+    }
+    itensModal[3].childNodes[2].innerText = 'R$ ' + String(total.toFixed(2)).replace('.', ',');
 }
 
 function calculatePrice() {
     const arrPrice = [];
+    arrItens = [];
     for (let i=0; i < options.length; i++) {
         if (options[i].classList.contains('selected')) {
             // Obtém o valor de cada item
             const price = options[i].getElementsByClassName('price-value');
             arrPrice.push(Number(price[0].innerText.replace(',', '.')));
+            // Obtém nome do item
+            const name = options[i].getElementsByTagName('h2')[0].innerText;
+            arrItens.push([name, price[0].innerText]);
         }
     }
-    return arrPrice.reduce((a, b) => a + b, 0);
+    return [arrPrice.reduce((a, b) => a + b, 0), arrItens];
 }
 
 function removeModal() {
     modal.classList.add('remove');
+}
+
+function makeOrder() {
+    // wip
+    console.log('Faz o pedido');
 }

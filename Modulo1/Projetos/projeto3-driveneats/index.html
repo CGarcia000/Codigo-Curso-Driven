@@ -16,14 +16,14 @@
         <h2>Sua comida em 6 minutos</h2>
     </header>
 
-    <div id="modal">
+    <div id="modal" class="remove">
         <div>
             <h1>Confirme seu pedido</h1>
-            <p><span>dkjas</span> <span>R$14,90</span></p>
-            <p><span>das</span> <span>R$4,90</span></p>
-            <p><span>das</span> <span>R$7,90</span></p>
-            <p class="bold"><span>Total</span> <span>R$27,90</span></p>
-            <button>Tudo certo, pode pedir!</button>
+            <p><span></span> <span></span></p>
+            <p><span></span> <span></span></p>
+            <p><span></span> <span></span></p>
+            <p class="bold"><span>Total</span> <span></span></p>
+            <button onclick="makeOrder()">Tudo certo, pode pedir!</button>
             <a href="#" onclick="removeModal()">Cancelar</a>
         </div>
     </div>
@@ -35,19 +35,7 @@
 
                 <div class="option">
                     <div>
-                        <img src="assets/img/hamb-siri.png" alt="">
-                        <h2>Frango Yin Yang</h2>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <div class="price">
-                            <span>R$<span class="price-value">4,90</span></span>
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="option">
-                    <div>
-                        <img src="assets/img/hamb-siri.png" alt="">
+                        <img src="assets/img/frango_yin_yang.png" alt="">
                         <h2>Frango Yin Yang</h2>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <div class="price">
@@ -60,10 +48,34 @@
                 <div class="option">
                     <div>
                         <img src="assets/img/hamb-siri.png" alt="">
-                        <h2>Frango Yin Yang</h2>
-                        <p>Um pouco de batata, um pouco de salada</p>
+                        <h2>Hambúrguer de Siri</h2>
+                        <p>Hambúrguer direto da fenda do biquini</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">10,99</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/naruto-ramen.png" alt="">
+                        <h2>Lamen do Narutinho</h2>
+                        <p>É tipo miojo, só que melhor!</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">13,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/pizza.png" alt="">
+                        <h2>Uma clássica pizza</h2>
+                        <p>É só uma pizza mesmo</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">20,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -77,11 +89,11 @@
 
                 <div class="option">
                     <div>
-                        <img src="assets/img/agua.png" alt="">
-                        <h2>Água</h2>
-                        <p>A mais pura água</p>
+                        <img src="assets/img/coquinha_gelada.png" alt="">
+                        <h2>Coquinha gelada</h2>
+                        <p>Lata 350ml</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">5,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -93,7 +105,7 @@
                         <h2>Água</h2>
                         <p>A mais pura água</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">3,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -101,11 +113,23 @@
 
                 <div class="option">
                     <div>
-                        <img src="assets/img/agua.png" alt="">
-                        <h2>Água</h2>
-                        <p>A mais pura água</p>
+                        <img src="assets/img/duff.jfif" alt="">
+                        <h2>Cerveja Duff</h2>
+                        <p>Original de Springfield</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">9,90</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/suco.png" alt="">
+                        <h2>Suco</h2>
+                        <p>Suquinho para acompanhar o seu lanche</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">8,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -118,11 +142,11 @@
             <div id="selector-dessert">
                 <div class="option">
                     <div>
-                        <img src="assets/img/donut.png" alt="">
-                        <h2>Água</h2>
-                        <p>A mais pura água</p>
+                        <img src="assets/img/pudim.png" alt="">
+                        <h2>Pudim</h2>
+                        <p>Apenas um pudim...</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">7,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -131,10 +155,10 @@
                 <div class="option">
                     <div>
                         <img src="assets/img/donut.png" alt="">
-                        <h2>Água</h2>
-                        <p>A mais pura água</p>
+                        <h2>Donut</h2>
+                        <p>Também importado de Springfield</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">8,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
@@ -142,11 +166,23 @@
 
                 <div class="option">
                     <div>
-                        <img src="assets/img/donut.png" alt="">
-                        <h2>Água</h2>
-                        <p>A mais pura água</p>
+                        <img src="assets/img/Cookie_cat_svg.png" alt="">
+                        <h2>cookieCat</h2>
+                        <p>He's super duper yummy!</p>
                         <div class="price">
-                            <span>R$<span class="price-value">14,90</span></span>
+                            <span>R$<span class="price-value">4,50</span></span>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div>
+                        <img src="assets/img/scooby-snack.png" alt="">
+                        <h2>Scooby-Snacks</h2>
+                        <p>Os clássicos Scooby-Snacks</p>
+                        <div class="price">
+                            <span>R$<span class="price-value">6,90</span></span>
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>

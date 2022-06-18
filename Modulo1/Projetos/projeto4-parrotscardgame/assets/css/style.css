@@ -1,0 +1,67 @@
+body {
+    background-color: #EEF9BF;
+}
+
+h1 {
+    color: #75B79E;
+    font-size: 63px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#container {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+
+/* Button */
+
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#btn.game-started {
+    display: none;
+}
+
+#btn button {
+    border: none;
+    height: 40px;
+    width: 250px; 
+    background-color: #75B79E;
+    font-size: 20px;
+    color: rgb(39, 38, 38);
+    border-radius: 20px;
+}
+
+/* Cards */
+
+.card {
+    width: 120px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    margin-bottom: 40px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}

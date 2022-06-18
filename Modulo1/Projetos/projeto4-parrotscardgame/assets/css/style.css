@@ -44,6 +44,7 @@ h1 {
     font-size: 20px;
     color: rgb(39, 38, 38);
     border-radius: 20px;
+    cursor: pointer;
 }
 
 /* Cards */
@@ -59,9 +60,18 @@ h1 {
     align-items: center;
     margin: 0 30px;
     margin-bottom: 40px;
+    transition: transform .5s;
+    /* background-image: url('../img/front.png'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
 }
 
 .card img {
     width: 100px;
     height: 100px;
+}
+
+.card.turned {
+    transform: rotateY(180deg);
 }

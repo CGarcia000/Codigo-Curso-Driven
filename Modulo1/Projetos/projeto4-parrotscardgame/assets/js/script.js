@@ -1,4 +1,6 @@
 const container = document.getElementById('container');
+const buttonStart = document.getElementById('btn');
+const end = document.getElementById('end')
 
 const basicCards = [
     {type: '1', img: 'assets/img/bobrossparrot.gif'},
@@ -10,7 +12,16 @@ const basicCards = [
     {type: '7', img: 'assets/img/unicornparrot.gif'},
 ]
 
+let gameCards;
+let points;
+
 function startGame() {
+    buttonStart.classList.add('game-started');
+    
+    points = 0;
+    gameCards = [];
+
+    end.innerHTML = ''
     container.innerHTML = ''
     
     const numCards = getInput();
@@ -19,17 +30,13 @@ function startGame() {
 
     for (let i=0; i < numCards; i++) {
         const card = document.createElement('div');
-        card.setAttribute('class', `card ${cards[i].type}`);
-        // card.setAttribute('class', cards[0].type);
+        card.setAttribute('class', 'card');
         card.style.backgroundImage = "url('assets/img/front.png')"
         card.addEventListener('click', () => {
             card.classList.toggle('turned');
             if (card.classList.contains('turned')) {
-                // setTimeout(
-                //     () => {card.style.backgroundImage = `url('${cards[i].img}')`},
-                //     100);
                 card.style.backgroundImage = `url('${cards[i].img}')`
-                cardsSelected.push(card);
+                cardsSelected.push(gameCards[i]);
                 console.log(cardsSelected)
                 if (cardsSelected.length === 2) cardsSelected = checkMatch(cardsSelected);
             } else {
@@ -39,9 +46,9 @@ function startGame() {
                 cardsSelected.pop(cards[i]);
             }
         });
+        gameCards.push({id:i, DOM: card, type: cards[i].type, foundMatch: false});
         container.appendChild(card);
-    }   
-    checkGame();
+    }
 }
 
 
@@ -66,33 +73,44 @@ function getArrayCards(numCards) {
 }
 
 
-function checkGame() {
-    
+function checkEnd() {
+    // checa se todas as cartas já tem seu Match
+    if (!Object.keys(gameCards).every((x) => gameCards[x].foundMatch)) return;
+
+    const endMessage = document.createElement('div');
+    endMessage.innerHTML = `<h2>Parabéns, sua pontuação foi: ${points}</h2>`;
+    end.appendChild(endMessage);
+    buttonStart.classList.remove('game-started');  
 }
 
 
 function checkMatch(arraySelected) {
     // Função que checa se as cartas são iguais e retorna a array com as cartas selecionadas
-    if (arraySelected[0].classList.value == arraySelected[1].classList.value) {
+    if (arraySelected[0].type == arraySelected[1].type) {
         console.log('Eh um match')
         // remove eventListeners
-        arraySelected[0].replaceWith(arraySelected[0].cloneNode(true))
-        arraySelected[1].replaceWith(arraySelected[1].cloneNode(true))
+        arraySelected[0].DOM.replaceWith(arraySelected[0].DOM.cloneNode(true))
+        arraySelected[1].DOM.replaceWith(arraySelected[1].DOM.cloneNode(true))
+        arraySelected[0].foundMatch = true;
+        arraySelected[1].foundMatch = true;
 
         arraySelected = arraySelected.slice(2);
+        points += 10;
+        checkEnd();
     }
     else {
         console.log('não é um match');
         const arrToRemove = [
-            arraySelected[0],
-            arraySelected[1]
+            arraySelected[0].DOM,
+            arraySelected[1].DOM
         ];
 
         setTimeout(() => {
             removeSelected(arrToRemove[0]);
             removeSelected(arrToRemove[1]);
-        }, 2000);
+        }, 1000);
         arraySelected = arraySelected.slice(2);
+        points -= 5;
     }
     return arraySelected;
 }
@@ -103,3 +121,4 @@ function removeSelected(cardToRemove) {
         () => {cardToRemove.style.backgroundImage = "url('assets/img/front.png')"},
         100);
 }
+

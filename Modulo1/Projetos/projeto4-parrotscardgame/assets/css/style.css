@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
 body {
     background-color: #EEF9BF;
     font-family: 'Roboto', sans-serif;
@@ -11,6 +10,10 @@ h1 {
     font-size: 63px;
 }
 
+#header {
+    height: 350px;
+}
+
 #title {
     display: flex;
     justify-content: center;
@@ -19,25 +22,23 @@ h1 {
 }
 
 #container {
-    /* padding: 0 120px; */
-    width: 80%;
-    position: fixed;
-    top:350px;
-    left: 10%;
+    padding: 0 120px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 
 #end {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 #end h2 {
     font-size: 20px;
     font-weight: 700;
+    margin: 10px;
 }
 
 /* Button */
@@ -90,4 +91,10 @@ h1 {
 
 .card.turned {
     transform: rotateY(180deg);
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 53px;
+    }
 }

@@ -14,11 +14,13 @@ const basicCards = [
 
 let gameCards;
 let points;
+let rounds;
 
 function startGame() {
     buttonStart.classList.add('game-started');
     
     points = 0;
+    rounds = 0;
     gameCards = [];
 
     end.innerHTML = ''
@@ -76,9 +78,15 @@ function getArrayCards(numCards) {
 function checkEnd() {
     // checa se todas as cartas já tem seu Match
     if (!Object.keys(gameCards).every((x) => gameCards[x].foundMatch)) return;
+    rounds++;
+
+    alert(`Você venceu com ${points} pontos e ${rounds} rodadas`)
 
     const endMessage = document.createElement('div');
-    endMessage.innerHTML = `<h2>Parabéns, sua pontuação foi: ${points}</h2>`;
+    endMessage.innerHTML = `
+        <h2>Parabéns, sua pontuação foi: ${points}</h2>
+        <h2>Você precisou de ${rounds} rodadas para encontrar todos os pares :)
+        `;
     end.appendChild(endMessage);
     buttonStart.classList.remove('game-started');  
 }
@@ -112,6 +120,7 @@ function checkMatch(arraySelected) {
         arraySelected = arraySelected.slice(2);
         points -= 5;
     }
+    rounds++;
     return arraySelected;
 }
 

@@ -80,7 +80,7 @@ function checkEnd() {
     if (!Object.keys(gameCards).every((x) => gameCards[x].foundMatch)) return;
     rounds++;
 
-    alert(`Você venceu com ${points} pontos e ${rounds} rodadas`)
+    setTimeout(() => {alert(`Você venceu com ${points} pontos e ${rounds} rodadas`)}, 100)
 
     const endMessage = document.createElement('div');
     endMessage.innerHTML = `

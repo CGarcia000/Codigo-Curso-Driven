@@ -16,7 +16,7 @@ function userOn() {
     
     promiseUsuario.catch(e => {
             console.log(e);
-            // userOn(); 
+            userOn(); 
     });
 }
 
@@ -24,11 +24,6 @@ function iniciarBatePapo() {
 
     carregaMensagens();
     setInterval(carregaMensagens, 3000);
-    setInterval(() => {
-        if (container.childElementCount > 300) {
-            container.innerHTML = "";
-        }
-    }, 3000);
 
     userOn();
 }
@@ -36,7 +31,7 @@ function iniciarBatePapo() {
 let ultimaMsg;
 
 function carregaMensagens() {
-    // container.innerHTML = '';
+    container.innerHTML = '';
     // shouldScroll = container.scrollTop + container.clientHeight === container.scrollHeight;
 
     const promiseMsg = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');

@@ -67,11 +67,6 @@ body {
     background-color: #FFDEDE;
 }
 
-.usuario-destino {
-    text-transform: capitalize;
-}
-
-
 /* Text input */
 
 #text-area {
@@ -100,3 +95,7 @@ textarea:focus {
     border: none;
 }
 
+btn-envio,
+i {
+    cursor: pointer;
+}

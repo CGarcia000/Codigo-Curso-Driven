@@ -1,55 +1,51 @@
 const container = document.getElementById('container');
+const inputMensagem = document.getElementById('msg-text');
 
-function entraSala() {
-    let isNameValid = false;
-    let userName;
-    while (!isNameValid) {
-        userName = prompt('Qual o seu nome?')
-        if (userName === null) continue;
+let userName;
 
-        // const promisseUsuario = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', { name: userName });
-        // promisseUsuario
-        //     .then(res => {
-        //         console.log(res);
-        //         isNameValid = true;
-        //     })
-        //     .catch(e => {
-        //         console.log(e)
-        //     });
-    }
-    return { name: userName };
+function userOn() {
+    userName = prompt('Qual o seu nome?');
+    objUser = { name: userName };
+    const promiseUsuario = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', objUser);
+    
+    promiseUsuario.then(res => {
+            setInterval(() => {
+                axios.post("https://mock-api.driven.com.br/api/v6/uol/status", objUser);
+            }, 4700);
+    });
+    
+    promiseUsuario.catch(e => {
+            console.log(e);
+            // userOn(); 
+    });
 }
 
-function Conected() {
-    const user = entraSala()
+function iniciarBatePapo() {
 
-    // setInterval( () => {
-    //     const promisseConect = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', user);
-    //     promisseConect
-    //         .then(res => {
-    //             console.log(res);
-    //         })
-    //         .catch(e => {
-    //             console.log(e);
-    //         })
-    // }, 5000);
-
+    carregaMensagens();
     setInterval(carregaMensagens, 3000);
+    setInterval(() => {
+        if (container.childElementCount > 300) {
+            container.innerHTML = "";
+        }
+    }, 3000);
+
+    userOn();
 }
 
-Conected()
-
+let ultimaMsg;
 
 function carregaMensagens() {
-    container.innerHTML = '';
-    const promisseMsg = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
+    // container.innerHTML = '';
+    // shouldScroll = container.scrollTop + container.clientHeight === container.scrollHeight;
 
-    console.log(promisseMsg);
-    promisseMsg
-        .then(res => {
+    const promiseMsg = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
+
+    promiseMsg.then(res => {
             const msgs = res.data;
-            console.log(msgs);
             for (let i = 0; i < msgs.length; i++) {
+                const isRelatedToUser = msgs[i].to === userName || msgs[i].to === "Todos" || msgs[i].from === userName;
+                if (msgs[i].type === 'private_message' && (!isRelatedToUser)) continue;
                 const mensagem = `<div class="mensagem ${msgs[i].type}">
                     <div class="msg">
                         <span class="time">(${msgs[i].time})</span>
@@ -59,10 +55,40 @@ function carregaMensagens() {
                     </div>
                 </div>`
                 container.innerHTML += mensagem;
+
+                if (i === 99) {
+                    container.lastChild.scrollIntoView();
+                    ultimaMsg = mensagem;
+                }
             } 
-        })
-        .catch(e => {
+    });
+    promiseMsg.catch(e => {
             console.log(e);
-        });
+    });
+
+    // if (!shouldScroll) {
+    //     scrollToBottom();
+    // }
 }
 
+
+
+iniciarBatePapo();
+
+function enviaMensagem () {
+    console.log(inputMensagem.value);
+    const objMsg = {
+        from: userName,
+        to: 'Todos',
+        text: inputMensagem.value,
+        type: 'message',
+    }
+    const promiseInput = axios.post('https://mock-api.driven.com.br/api/v6/uol/messages', objMsg);
+    console.log(promiseInput);
+    inputMensagem.value = '';
+    promiseInput.then(carregaMensagens);
+    promiseInput.catch(e => {
+        console.log(e);
+        window.location.reload();
+    })
+}

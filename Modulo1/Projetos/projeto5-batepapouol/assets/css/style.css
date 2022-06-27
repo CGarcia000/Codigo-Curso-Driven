@@ -59,13 +59,16 @@ body {
     color: #aaaaaa  ;
 }
 
-.msg-entrada,
-.msg-saida {
+.status {
     background-color: #DCDCDC;
 }
 
-.msg-reservada {
+.private_message {
     background-color: #FFDEDE;
+}
+
+.usuario-destino {
+    text-transform: capitalize;
 }
 
 

@@ -8,10 +8,28 @@ const suggestionsArr = [
         reason: '',
     },
     {
-        userAvatar: "img/badvibesmemes.png",
-        userName: "bad.vibes.memes",
+        userAvatar: "img/chibirdart.png",
+        userName: "chibirdart",
+        isFollower: true,
+        reason: '',
+    },
+    {
+        userAvatar: "img/razoesparaacreditar.png",
+        userName: "razoesparaacreditar",
         isFollower: false,
-        reason: 'Novo no site',
+        reason: 'Novo no Instagram',
+    },
+    {
+        userAvatar: "img/adorableanimals-sugestao.png",
+        userName: "adorable_animals",
+        isFollower: true,
+        reason: '',
+    },
+    {
+        userAvatar: "img/smallcutecats.png",
+        userName: "smallcutecats",
+        isFollower: true,
+        reason: '',
     },
 ]
 

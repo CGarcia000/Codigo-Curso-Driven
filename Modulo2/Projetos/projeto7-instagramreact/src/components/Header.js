@@ -13,10 +13,14 @@ export function Header() {
             <input type="text" placeholder="Pesquisar" id="barra-pesquisa" />
             
             <div id="buttons">
-                <a href="#"><i class="fa-regular fa-paper-plane"></i></a>
+                <button class="btn-app"><i class="fa-regular fa-paper-plane"></i></button>
+                <button class="btn-app"><i class="fa-regular fa-compass"></i></button>
+                <button class="btn-app"><i class="fa-regular fa-heart"></i></button>
+                <button class="btn-app"><i class="fa-regular fa-user"></i></button>
+                {/* <a href="#"><i class="fa-regular fa-paper-plane"></i></a>
                 <a href="#"><i class="fa-regular fa-compass"></i></a>
                 <a href="#"><i class="fa-regular fa-heart"></i></a>
-                <a href="#"><i class="fa-regular fa-user"></i></a>                      
+                <a href="#"><i class="fa-regular fa-user"></i></a>*/}
             </div>
         </div>
     )

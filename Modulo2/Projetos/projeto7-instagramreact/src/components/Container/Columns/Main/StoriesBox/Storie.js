@@ -1,12 +1,13 @@
 
 export function Storie({
     srcImg,
-    nameUserStorie
+    nameUserStorie,
+    userLink
 }) {
     return (
         <div class="storie">
             <div class="storie-user">
-                <a >
+                <a href={userLink}>
                     <img src="img/stories_background.jpg" class="storie-bg" alt="" />
                     <img src={srcImg} class="storie-icon" alt="" />
                 </a> 

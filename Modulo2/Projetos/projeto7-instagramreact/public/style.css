@@ -25,6 +25,7 @@ i {
 a {
     text-decoration: none;
     color: #139EF2;
+    cursor: pointer;
 }
 
 input {
@@ -245,6 +246,10 @@ span {
     justify-content: space-between;
 }
 
+.liked {
+    color: crimson;
+}
+
 .like-important {
     display: flex;
     align-items: center;
@@ -308,6 +313,18 @@ span {
 
 #footer-mobile {
     display: none;
+}
+
+.btn-app {
+    border: none;
+    background-color: transparent;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.btn-follow {
+    font-size: 12px;
+    color: #139EF2;
 }
 
 /* Media query */

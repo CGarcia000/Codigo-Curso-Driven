@@ -5,6 +5,7 @@ const postsArr = [
         user: {
             avatar: "img/meowed.png",
             name: "meowed",
+            url: "https://instagram.com",
         },
         postImg: {
             src: "img/gato-telefone.png",
@@ -15,24 +16,25 @@ const postsArr = [
                 userAvatar: "img/respondeai.png",
                 userName: "respondeai",
             },
-            number: 101.523, 
+            number: 101523, 
         }
     },
     {
         user: {
-            avatar: "img/meowed.png",
-            name: "meowed",
+            avatar: "img/barked.png",
+            name: "barked",
+            url: "https://instagram.com",
         },
         postImg: {
-            src: "img/gato-telefone.png",
+            src: "img/dog.png",
             alt: "",
         },
         likes: {
             important: {
-                userAvatar: "img/respondeai.png",
-                userName: "respondeai",
+                userAvatar: "img/adorableanimals.png",
+                userName: "adorable_animals",
             },
-            number: 101.523, 
+            number: 99159, 
         }
     },
 ]

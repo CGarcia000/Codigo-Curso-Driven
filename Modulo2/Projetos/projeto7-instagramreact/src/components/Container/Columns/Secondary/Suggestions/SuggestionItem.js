@@ -15,7 +15,7 @@ export function SuggestionItem({
                     <p>{isFollower ? 'Segue você' : reason}</p>
                 </div>
             </div>
-            <a href="">Seguir</a>
+            <button class="btn-app btn-follow">Seguir</button>
         </div>
     );
 }
